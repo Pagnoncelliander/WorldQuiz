@@ -25,3 +25,13 @@ const questions = [
         correctIndex: 3
     }
 ];
+
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById("options");
+const nextButton = document.getElementById("next-button");
+const resultElement = document.getElementById("result");
+const tryAgain = document.getElementById("refresh");
+const NewGame = document.getElementById("new-game");
+
+let currentQuestion = 0;
+let score = 0;
