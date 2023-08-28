@@ -39,9 +39,9 @@ let score = 0;
 
 /** created a function "if" to display the question html, click and display botton */
 function displayQuestion() {
-    if (currentQuestion < questions.length) { /*se currentQuestion = 0 for menor que questionse questions nela*/
-        const question2 = questions[currentQuestion];/* na variavel question2 foi colocado quesitoins"questions" dentro do currentequestion */
-        questionElement.textContent = question2.question; /* questionElement recebe o texto e atribui question2 e quetion*/
+    if (currentQuestion < questions.length) {
+        const question2 = questions[currentQuestion];
+        questionElement.textContent = question2.question;
 
         optionsElement.innerHTML = "";
         question2.options.forEach((option, correctIndex) => {
@@ -56,4 +56,19 @@ function displayQuestion() {
     } else {
         showResult();
     }
+}
+
+/**this function will check each question and display the correct question */
+function checkAnswer(selectedIndex) {
+    const question = questions[currentQuestion];
+    if (selectedIndex === question.correctIndex) {
+        score++;
+    }
+
+    currentQuestion++;
+    nextButton.style.display = "block";
+
+    // Disable buttons after an answer is selected
+    const buttons = optionsElement.querySelectorAll("button");
+    buttons.forEach(button => button.disabled = true);
 }
