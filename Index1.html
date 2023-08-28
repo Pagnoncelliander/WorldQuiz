@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="Quiz game with gegeral questions" >
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="Quiz game with general questions">
     <meta name="keywords" content="Quiz">
-    <meta name="author" content="MaxTech Games">
+    <meta name="author" content="MaxTech Games" >
 
     <title>Simple JavaScript Quiz</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1 class="title">General Knowledge Quiz</h1>
-      <div id="question"></div>
+    <link rel ="stylesheet" href="assets/css/style.css">   
 
-      <div id="options" type="radio">question1</div>
+</head>
+<body>
+   
+<div id="quiz-container">
+        <h1 class="title">General Knowledge Quiz</h1>
+              
+  <section id="form-section">
+    <form class="signup-form" method="GET" action="Index.html">
 
-      <button id="next-button">Next</button>
+        <h2>Let's get you signed up!</h2>
 
-      <div id="result" style="display: none"></div>
+        <label for="fname">UserName</label>
+        <input id="first_name" class="text-input" type="text"  name="first_name" required>
 
-      <button id="refresh">Try Again!</button>
+     
 
-      <a href="Inner1.html" aria-label="Go to the first page">
-        <button id="new-game">New Game</button>
-      </a>
-    </div>
-    <script src="assets/js/script.js"></script>
-  </body>
-</html>
+        <button type="submit" id="start-button">Let's Run!</button> 
+
+        </form>
+    </section> 
+
+</div>
